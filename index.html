@@ -1,34 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TrYsIdeWEd | Digital Systems, Automation & Infrastructure</title>
+  <title>TrYsIdeWEd | Ekosistem Digital, Otomasi & Infrastruktur</title>
   <meta
     name="description"
-    content="TrYsIdeWEd is a digital ecosystem focused on automation, infrastructure, dashboards, hosting and domain management, workflow systems, custom tools, bot integrations, SEO architecture, and scalable web platforms."
+    content="TrYsIdeWEd adalah ekosistem digital yang berfokus pada otomasi, dashboard, infrastruktur hosting, manajemen domain, integrasi bot, tools kustom, SEO architecture, dan pengembangan platform digital yang scalable."
   />
   <meta
     name="keywords"
-    content="TrYsIdeWEd, tryxapp, automation, infrastructure, dashboard, hosting, domain management, GitHub Pages, SEO systems, bot integrations, portfolio"
+    content="TrYsIdeWEd, tryxapp, otomasi, dashboard, hosting, domain, bot telegram, infrastruktur, portfolio, github pages"
   />
   <meta name="author" content="TrYsIdeWEd" />
 
   <style>
     :root {
       --bg: #06101d;
-      --bg2: #09182b;
+      --bg2: #0a1628;
       --panel: rgba(255,255,255,0.06);
-      --panel-2: rgba(255,255,255,0.04);
+      --panel2: rgba(255,255,255,0.04);
       --line: rgba(255,255,255,0.10);
       --text: #eef4ff;
-      --muted: #9fb3d1;
+      --muted: #9eb1cf;
       --accent: #4ea2ff;
-      --accent2: #71f0ff;
-      --accent3: #7effbf;
+      --accent2: #75f0ff;
+      --accent3: #7dffbf;
       --shadow: 0 12px 40px rgba(0,0,0,.28);
       --radius: 24px;
-      --max: 1220px;
+      --max: 1240px;
     }
 
     * {
@@ -45,10 +45,10 @@
       font-family: Inter, Arial, Helvetica, sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at 10% 10%, rgba(78,162,255,.18), transparent 24%),
-        radial-gradient(circle at 90% 0%, rgba(113,240,255,.13), transparent 22%),
-        radial-gradient(circle at 50% 100%, rgba(126,255,191,.08), transparent 30%),
-        linear-gradient(180deg, var(--bg) 0%, var(--bg2) 48%, #07111d 100%);
+        radial-gradient(circle at 10% 10%, rgba(78,162,255,.18), transparent 25%),
+        radial-gradient(circle at 90% 0%, rgba(117,240,255,.12), transparent 25%),
+        radial-gradient(circle at 50% 100%, rgba(125,255,191,.08), transparent 32%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg2) 46%, #07111d 100%);
       overflow-x: hidden;
     }
 
@@ -62,7 +62,7 @@
       margin: 0 auto;
     }
 
-    .blur-orb {
+    .orb {
       position: fixed;
       width: 320px;
       height: 320px;
@@ -74,29 +74,13 @@
       animation: floatOrb 12s ease-in-out infinite;
     }
 
-    .orb1 {
-      top: 80px;
-      left: -60px;
-      background: var(--accent);
-    }
-
-    .orb2 {
-      right: -40px;
-      top: 300px;
-      background: var(--accent2);
-      animation-delay: -4s;
-    }
-
-    .orb3 {
-      left: 40%;
-      bottom: -120px;
-      background: var(--accent3);
-      animation-delay: -8s;
-    }
+    .orb1 { top: 60px; left: -70px; background: var(--accent); }
+    .orb2 { right: -60px; top: 280px; background: var(--accent2); animation-delay: -4s; }
+    .orb3 { left: 35%; bottom: -120px; background: var(--accent3); animation-delay: -8s; }
 
     @keyframes floatOrb {
       0%,100% { transform: translateY(0) translateX(0) scale(1); }
-      50% { transform: translateY(-28px) translateX(12px) scale(1.06); }
+      50% { transform: translateY(-25px) translateX(15px) scale(1.05); }
     }
 
     .navbar {
@@ -121,10 +105,10 @@
       align-items: center;
       gap: 14px;
       font-weight: 800;
-      letter-spacing: .6px;
+      letter-spacing: .5px;
     }
 
-    .brand-mark {
+    .logo {
       width: 44px;
       height: 44px;
       border-radius: 14px;
@@ -164,11 +148,11 @@
     .github-btn:hover {
       transform: translateY(-2px);
       background: rgba(255,255,255,.09);
-      color: white;
+      color: #fff;
     }
 
     .hero {
-      padding: 88px 0 52px;
+      padding: 90px 0 54px;
     }
 
     .hero-grid {
@@ -184,8 +168,8 @@
       gap: 8px;
       padding: 9px 14px;
       border-radius: 999px;
-      border: 1px solid rgba(113,240,255,.20);
-      background: rgba(113,240,255,.07);
+      border: 1px solid rgba(117,240,255,.20);
+      background: rgba(117,240,255,.07);
       color: var(--accent2);
       font-size: .84rem;
       letter-spacing: .4px;
@@ -194,14 +178,14 @@
     }
 
     .hero h1 {
-      font-size: clamp(2.5rem, 5vw, 5.1rem);
-      line-height: 1.02;
+      font-size: clamp(2.4rem, 5vw, 5rem);
+      line-height: 1.04;
       margin-bottom: 18px;
       animation: fadeUp .95s ease both;
     }
 
-    .hero .grad {
-      background: linear-gradient(90deg, #ffffff 0%, #bfe4ff 30%, var(--accent2) 68%, var(--accent) 100%);
+    .grad {
+      background: linear-gradient(90deg, #ffffff 0%, #bde3ff 30%, var(--accent2) 68%, var(--accent) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -209,9 +193,9 @@
     .hero p {
       color: var(--muted);
       font-size: 1.05rem;
-      max-width: 760px;
+      max-width: 780px;
       margin-bottom: 26px;
-      animation: fadeUp 1.08s ease both;
+      animation: fadeUp 1.05s ease both;
     }
 
     .hero-actions {
@@ -241,8 +225,8 @@
     }
 
     .btn-primary:hover {
-      transform: translateY(-2px) scale(1.01);
-      filter: brightness(1.03);
+      transform: translateY(-2px);
+      filter: brightness(1.04);
     }
 
     .btn-secondary {
@@ -264,7 +248,7 @@
       box-shadow: var(--shadow);
       position: relative;
       overflow: hidden;
-      animation: fadeInScale 1s ease both;
+      animation: fadeScale 1s ease both;
     }
 
     .hero-panel::after {
@@ -289,7 +273,7 @@
     }
 
     .signal {
-      padding: 14px 14px;
+      padding: 14px;
       border-radius: 16px;
       background: rgba(255,255,255,.05);
       border: 1px solid rgba(255,255,255,.08);
@@ -307,7 +291,7 @@
     }
 
     .section {
-      padding: 34px 0;
+      padding: 36px 0;
     }
 
     .section-head {
@@ -321,7 +305,7 @@
 
     .section-head p {
       color: var(--muted);
-      max-width: 860px;
+      max-width: 900px;
     }
 
     .grid-2 {
@@ -353,7 +337,7 @@
 
     .card:hover {
       transform: translateY(-5px);
-      border-color: rgba(113,240,255,.24);
+      border-color: rgba(117,240,255,.24);
       background: rgba(255,255,255,.075);
     }
 
@@ -365,7 +349,7 @@
     .card p {
       color: var(--muted);
       font-size: .97rem;
-      line-height: 1.65;
+      line-height: 1.68;
     }
 
     .mini {
@@ -406,8 +390,7 @@
       padding: 24px;
       border-radius: 26px;
       border: 1px solid var(--line);
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
       position: relative;
       overflow: hidden;
       box-shadow: var(--shadow);
@@ -420,29 +403,31 @@
       width: 180px;
       height: 180px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(113,240,255,.14), transparent 66%);
+      background: radial-gradient(circle, rgba(117,240,255,.14), transparent 66%);
+    }
+
+    .project-card h3,
+    .project-card p,
+    .project-card .tags {
+      position: relative;
+      z-index: 1;
     }
 
     .project-card h3 {
       font-size: 1.15rem;
       margin-bottom: 10px;
-      position: relative;
-      z-index: 1;
     }
 
     .project-card p {
       color: var(--muted);
       margin-bottom: 16px;
-      position: relative;
-      z-index: 1;
+      line-height: 1.68;
     }
 
     .tags {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      position: relative;
-      z-index: 1;
     }
 
     .tag {
@@ -450,7 +435,7 @@
       border-radius: 999px;
       border: 1px solid rgba(255,255,255,.10);
       background: rgba(255,255,255,.05);
-      color: #d8e6ff;
+      color: #d7e7ff;
       font-size: .84rem;
     }
 
@@ -476,6 +461,7 @@
 
     .timeline-item p {
       color: var(--muted);
+      line-height: 1.65;
     }
 
     .stack-list {
@@ -513,14 +499,15 @@
 
     .portfolio-item p {
       color: var(--muted);
+      line-height: 1.68;
     }
 
     .cta-box {
       text-align: center;
-      padding: 34px 24px;
+      padding: 36px 24px;
       border-radius: 28px;
       border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(78,162,255,.11), rgba(113,240,255,.07));
+      background: linear-gradient(180deg, rgba(78,162,255,.11), rgba(117,240,255,.07));
       box-shadow: var(--shadow);
     }
 
@@ -531,8 +518,9 @@
 
     .cta-box p {
       color: var(--muted);
-      max-width: 760px;
+      max-width: 800px;
       margin: 0 auto 22px;
+      line-height: 1.72;
     }
 
     .footer {
@@ -570,7 +558,7 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes fadeInScale {
+    @keyframes fadeScale {
       from { opacity: 0; transform: translateY(16px) scale(.98); }
       to { opacity: 1; transform: translateY(0) scale(1); }
     }
@@ -602,24 +590,24 @@
   </style>
 </head>
 <body>
-  <div class="blur-orb orb1"></div>
-  <div class="blur-orb orb2"></div>
-  <div class="blur-orb orb3"></div>
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
 
   <header class="navbar">
     <div class="container nav-wrap">
-      <a href="#" class="brand">
-        <span class="brand-mark">T</span>
+      <a href="#" class="TrYsIdeWEd">
+        <span class="logo">T</span>
         <span>TrYsIdeWEd</span>
       </a>
 
       <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#ecosystem">Ecosystem</a>
-        <a href="#showcase">Projects</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#stack">Stack</a>
-        <a href="#contact">Contact</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#ekosistem">Ekosistem</a>
+        <a href="#showcase">Proyek</a>
+        <a href="#portofolio">Portofolio</a>
+        <a href="#stack">Teknologi</a>
+        <a href="#kontak">Kontak</a>
         <a class="github-btn" href="https://github.com/tryxapp" target="_blank">GitHub</a>
       </nav>
     </div>
@@ -629,112 +617,112 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Digital Systems • Automation • Infrastructure • Creative Engineering</div>
+          <div class="eyebrow">Ekosistem Digital • Otomasi • Infrastruktur • Brand Engineering</div>
           <h1>
-            Building the <span class="grad">TrYsIdeWEd</span> ecosystem —
-            a living archive of platforms, tools, workflows, and ideas shaped into real systems.
+            Membangun ekosistem <span class="grad">TrYsIdeWEd</span> sebagai pusat proyek, sistem, otomasi, dan identitas digital
           </h1>
           <p>
-            TrYsIdeWEd is a personal digital brand and technical ecosystem focused on scalable web platforms,
-            automation workflows, dashboard systems, domain and hosting management, bot integrations,
-            infrastructure control, SEO-ready architectures, and custom utilities built across multiple stacks.
-            This site presents the story, direction, and portfolio of everything that has been designed,
-            refined, and expanded through that vision.
+            TrYsIdeWEd adalah identitas digital dan fondasi ekosistem teknologi yang dirancang untuk menghubungkan
+            dashboard, hosting, domain management, bot integration, workflow automation, tools kustom,
+            arsitektur SEO, hingga platform web yang scalable. Website ini menjadi profil utama untuk menjelaskan
+            arah pengembangan, portofolio proyek, kemampuan teknis, serta visi jangka panjang dari semua hal
+            yang telah dibangun dan terus dikembangkan.
           </p>
 
           <div class="hero-actions">
-            <a href="#showcase" class="btn btn-primary">Explore Projects</a>
-            <a href="https://github.com/tryxapp" target="_blank" class="btn btn-secondary">View GitHub</a>
+            <a href="#showcase" class="btn btn-primary">Lihat Proyek</a>
+            <a href="https://github.com/tryxapp" target="_blank" class="btn btn-secondary">Buka GitHub</a>
           </div>
         </div>
 
         <div class="hero-panel">
-          <div class="panel-title">Core Signals of TrYsIdeWEd</div>
+          <div class="panel-title">Pilar Utama TrYsIdeWEd</div>
           <div class="signal-list">
             <div class="signal">
-              <strong>Automation-First Thinking</strong>
-              <span>Systems are designed to reduce repetitive work, connect moving parts, and keep operations efficient.</span>
+              <strong>Otomasi sebagai inti sistem</strong>
+              <span>Setiap proyek diarahkan untuk mengurangi pekerjaan manual, mempercepat alur kerja, dan meningkatkan efisiensi operasional.</span>
             </div>
             <div class="signal">
-              <strong>Infrastructure Awareness</strong>
-              <span>From domains and hosting to dashboards, APIs, server workflows, and deployment structure.</span>
+              <strong>Pemikiran infrastruktur yang menyeluruh</strong>
+              <span>Mulai dari domain, hosting, dashboard, integrasi API, sampai pengelolaan server dan struktur deployment.</span>
             </div>
             <div class="signal">
-              <strong>Brand-Driven Engineering</strong>
-              <span>Every tool, panel, and interface is built with a recognizable identity, not just technical function.</span>
+              <strong>Brand yang menyatu dengan teknis</strong>
+              <span>Setiap panel, tools, dan antarmuka dibangun bukan hanya agar berfungsi, tetapi juga membawa identitas visual yang kuat.</span>
             </div>
             <div class="signal">
-              <strong>Cross-Stack Execution</strong>
-              <span>Node.js, PHP, Python, dashboards, bots, Sheets integrations, SEO systems, and custom admin panels.</span>
+              <strong>Eksekusi lintas stack</strong>
+              <span>Memanfaatkan HTML, CSS, JavaScript, Node.js, PHP, Python, Google Sheets, bot, dan dashboard modern sesuai kebutuhan proyek.</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section reveal" id="about">
+    <section class="section reveal" id="tentang">
       <div class="container">
         <div class="section-head">
-          <h2>About TrYsIdeWEd</h2>
+          <h2>Tentang TrYsIdeWEd</h2>
           <p>
-            TrYsIdeWEd is more than a name. It represents a long-running effort to turn scattered ideas into
-            connected systems: branded dashboards, hosting utilities, automation pipelines, portfolio-grade web experiences,
-            internal tools, and operational frameworks that can scale. What started as experimentation grew into
-            a broad ecosystem of technical concepts covering administration, monitoring, workflow automation,
-            user-facing design, data handling, and system integration.
+            TrYsIdeWEd bukan sekadar nama brand, tetapi representasi dari cara membangun sistem:
+            rapi, terstruktur, fleksibel, dan siap berkembang. Fokus utamanya adalah mengubah ide menjadi
+            platform nyata yang dapat digunakan, dikembangkan, dan diintegrasikan ke banyak kebutuhan digital.
+            Dari halaman profil sederhana hingga panel manajemen yang kompleks, semuanya diarahkan menjadi
+            bagian dari satu ekosistem besar yang saling terhubung.
           </p>
         </div>
 
         <div class="grid-2">
           <div class="card">
-            <span class="mini">Identity</span>
-            <h3>A technical brand with a strong visual and operational direction</h3>
+            <span class="mini">Identitas</span>
+            <h3>Brand teknis dengan arah visual dan operasional yang kuat</h3>
             <p>
-              TrYsIdeWEd combines engineering, branding, and system architecture. The goal is not only to build tools
-              that work, but to build tools that belong to a larger ecosystem: consistent in design, purposeful in structure,
-              and ready to evolve into more capable platforms.
+              TrYsIdeWEd dibangun sebagai identitas yang menyatukan engineering, desain antarmuka,
+              otomasi, dan struktur sistem. Tujuannya bukan hanya menghasilkan script atau tools yang bekerja,
+              tetapi menciptakan platform yang terasa matang, profesional, dan memiliki ciri khas visual yang jelas.
             </p>
           </div>
+
           <div class="card">
-            <span class="mini">Mission</span>
-            <h3>Transforming ideas into platforms, not just one-off scripts</h3>
+            <span class="mini">Tujuan</span>
+            <h3>Mengubah ide dan eksperimen menjadi platform yang siap tumbuh</h3>
             <p>
-              The long-term vision is to create reusable infrastructure: dashboards, panels, automation flows,
-              data-driven systems, project websites, management portals, and custom services that can work together
-              across different domains and deployment environments.
+              Banyak proyek bermula dari kebutuhan praktis, lalu berkembang menjadi sistem yang lebih besar:
+              dashboard admin, tools otomatis, integrasi data, website profil, manajemen domain,
+              hingga ekosistem monitoring dan pengelolaan infrastruktur digital.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section reveal" id="ecosystem">
+    <section class="section reveal" id="ekosistem">
       <div class="container">
         <div class="section-head">
-          <h2>The TrYsIdeWEd Ecosystem</h2>
+          <h2>Ekosistem TrYsIdeWEd</h2>
           <p>
-            The work behind TrYsIdeWEd spans multiple categories. Some projects are user-facing,
-            some are internal tools, and some are infrastructure layers that tie everything together.
-            Together they form a portfolio of practical digital systems.
+            Ekosistem ini dibangun dari berbagai komponen yang saling melengkapi. Ada bagian yang berfokus pada
+            tampilan dan branding, ada yang fokus pada administrasi dan kontrol, ada yang menangani data,
+            dan ada pula yang berfungsi sebagai mesin otomasi di belakang layar.
           </p>
         </div>
 
         <div class="grid-4">
           <div class="metric">
             <h3>01</h3>
-            <p>Brand-driven system design</p>
+            <p>Brand dan identitas digital yang konsisten</p>
           </div>
           <div class="metric">
             <h3>02</h3>
-            <p>Automation-oriented workflows</p>
+            <p>Workflow otomatis untuk efisiensi operasional</p>
           </div>
           <div class="metric">
             <h3>03</h3>
-            <p>Infrastructure and dashboard thinking</p>
+            <p>Dashboard dan panel manajemen terpusat</p>
           </div>
           <div class="metric">
             <h3>04</h3>
-            <p>Scalable multi-project architecture</p>
+            <p>Arsitektur proyek yang scalable dan fleksibel</p>
           </div>
         </div>
       </div>
@@ -745,100 +733,99 @@
         <div class="section-head">
           <h2>Project Showcase</h2>
           <p>
-            These are the major project directions and systems that define the TrYsIdeWEd portfolio.
-            The descriptions below are written as a professional overview of the work developed and refined over time.
+            Bagian ini menjelaskan arah utama proyek-proyek yang membentuk TrYsIdeWEd.
+            Setiap proyek di sini mewakili kategori besar dari sistem yang pernah dirancang, dibangun, atau dikembangkan.
           </p>
         </div>
 
         <div class="showcase">
           <div class="project-card">
-            <h3>Centralized Hosting & Domain Management Platform</h3>
+            <h3>Platform Manajemen Hosting & Domain Terpusat</h3>
             <p>
-              A large platform vision for managing domains, hosting accounts, VPS instances, server health,
-              cPanel and WHM integrations, zone and DNS control, usage statistics, cron visibility,
-              file management modules, and multi-server orchestration from a unified dashboard.
+              Sebuah konsep platform besar untuk mengelola banyak domain, akun hosting, VPS, data penggunaan,
+              sinkronisasi domain, kontrol DNS, monitoring server, file management, health metrics,
+              dan orkestrasi multi-server dalam satu dashboard yang rapi dan mudah dikendalikan.
             </p>
             <div class="tags">
               <span class="tag">Hosting Control</span>
-              <span class="tag">Server Scope</span>
               <span class="tag">Domain Sync</span>
-              <span class="tag">Monitoring</span>
+              <span class="tag">Server Monitoring</span>
+              <span class="tag">Dashboard Panel</span>
             </div>
           </div>
 
           <div class="project-card">
-            <h3>TRIXY Automation System</h3>
+            <h3>Sistem Otomasi TRIXY</h3>
             <p>
-              A branded automation concept centered around transaction workflows, data logging,
-              dashboard visibility, real-time input handling, bank and e-wallet mapping,
-              Google Sheets integration, backend event flow, and operational automation through
-              a custom panel with a dark blue premium identity.
+              Sebuah konsep panel dan alur kerja yang menekankan otomatisasi proses, pencatatan data,
+              integrasi spreadsheet, pemetaan informasi, kontrol backend, dan visual dashboard premium
+              dengan identitas warna biru gelap yang elegan dan profesional.
             </p>
             <div class="tags">
-              <span class="tag">TRIXY Panel</span>
-              <span class="tag">Sheets Logging</span>
-              <span class="tag">Workflow Engine</span>
-              <span class="tag">Backend Integration</span>
+              <span class="tag">TRIXY</span>
+              <span class="tag">Automation Flow</span>
+              <span class="tag">Google Sheets</span>
+              <span class="tag">Operational Dashboard</span>
             </div>
           </div>
 
           <div class="project-card">
-            <h3>Telegram Bot Management Systems</h3>
+            <h3>Sistem Bot Telegram untuk Pengelolaan Operasional</h3>
             <p>
-              A family of bot-driven tools and command systems for administration, notifications,
-              configuration management, spreadsheet mapping, server-aware controls, and operational support.
-              These projects focus on making remote systems easier to manage through clear command structures.
+              Kumpulan konsep bot untuk notifikasi, command management, pengaturan konfigurasi,
+              kontrol layanan jarak jauh, pemetaan spreadsheet, dan administrasi sistem
+              agar aktivitas operasional bisa dilakukan dengan lebih cepat dan lebih terpusat.
             </p>
             <div class="tags">
-              <span class="tag">Bot Commands</span>
+              <span class="tag">Telegram Bot</span>
               <span class="tag">Remote Control</span>
-              <span class="tag">Admin Workflows</span>
-              <span class="tag">Config Management</span>
+              <span class="tag">Admin Commands</span>
+              <span class="tag">Config Tools</span>
             </div>
           </div>
 
           <div class="project-card">
-            <h3>Custom Admin Panels & Dashboards</h3>
+            <h3>Admin Panel & Dashboard Kustom</h3>
             <p>
-              A recurring theme across the ecosystem is the creation of polished dashboards:
-              statistics views, listing pages, user management interfaces, operational controls,
-              tracking tools, and admin experiences designed with strong attention to UI clarity and brand identity.
+              Berbagai panel admin yang menampilkan statistik, daftar data, manajemen pengguna,
+              sistem monitoring, kontrol workflow, dan tampilan operasional yang dirancang dengan fokus
+              pada kerapihan UI, keterbacaan, dan identitas visual yang kuat.
             </p>
             <div class="tags">
               <span class="tag">Admin UI</span>
-              <span class="tag">Data Panels</span>
-              <span class="tag">Monitoring Views</span>
-              <span class="tag">Custom UX</span>
+              <span class="tag">Data View</span>
+              <span class="tag">Management Panel</span>
+              <span class="tag">Custom Interface</span>
             </div>
           </div>
 
           <div class="project-card">
-            <h3>SEO Architecture & Indexability Systems</h3>
+            <h3>Arsitektur SEO & Struktur Indexability</h3>
             <p>
-              A continuous line of work focused on crawlability, structured metadata, sitemap planning,
-              robots rules, content layout, ranking support, and scalable SEO-aware page systems
-              built to support visibility and discoverability across many domains and content models.
+              Pengembangan struktur halaman, metadata, robots rules, sitemap planning, layout konten,
+              dan elemen teknis lain yang mendukung crawlability, indexability, dan kesiapan halaman
+              untuk tumbuh secara organik di mesin pencari.
             </p>
             <div class="tags">
               <span class="tag">SEO Structure</span>
-              <span class="tag">Sitemaps</span>
-              <span class="tag">Robots Rules</span>
+              <span class="tag">Metadata</span>
+              <span class="tag">Sitemap</span>
               <span class="tag">Indexability</span>
             </div>
           </div>
 
           <div class="project-card">
-            <h3>Brand Websites, Landing Pages & Portfolio Experiences</h3>
+            <h3>Website Profil, Landing Page & Showcase Brand</h3>
             <p>
-              Beyond internal systems, TrYsIdeWEd also includes front-end identity work:
-              company-style websites, project landing pages, premium branded layouts, animated hero sections,
-              showcase pages, and responsive interfaces designed to present systems in a professional way.
+              Selain tools internal, TrYsIdeWEd juga berkembang dalam bentuk website profil,
+              landing page, tampilan project showcase, halaman brand, dan front-end modern
+              yang digunakan untuk mempresentasikan proyek secara lebih profesional.
             </p>
             <div class="tags">
-              <span class="tag">Brand Design</span>
-              <span class="tag">Landing Pages</span>
+              <span class="tag">Landing Page</span>
+              <span class="tag">Brand Site</span>
+              <span class="tag">Showcase</span>
               <span class="tag">Responsive UI</span>
-              <span class="tag">Portfolio Web</span>
             </div>
           </div>
         </div>
@@ -848,134 +835,126 @@
     <section class="section reveal">
       <div class="container">
         <div class="section-head">
-          <h2>Detailed Capability Areas</h2>
+          <h2>Area Kemampuan Utama</h2>
           <p>
-            TrYsIdeWEd is built around repeatable capability blocks. These are the building blocks that appear again and again
-            across the ecosystem and shape how each project is designed.
+            Di balik semua proyek, ada beberapa blok kemampuan yang selalu menjadi fondasi utama dalam pengembangan TrYsIdeWEd.
           </p>
         </div>
 
         <div class="grid-3">
           <div class="card">
-            <span class="mini">Automation</span>
-            <h3>Workflow Design & Process Logic</h3>
+            <span class="mini">Otomasi</span>
+            <h3>Perancangan workflow dan alur proses</h3>
             <p>
-              Automation work focuses on reducing manual friction, linking data sources,
-              defining repeatable flows, and building systems that can monitor, react,
-              log results, and present status through dashboards or notifications.
+              Fokus pada membangun proses yang dapat berjalan otomatis, mampu memindahkan data,
+              mencatat hasil, menampilkan status, dan menghubungkan banyak layanan menjadi satu alur yang efisien.
             </p>
           </div>
 
           <div class="card">
-            <span class="mini">Infrastructure</span>
-            <h3>Hosting, Servers, Domains & Platform Structure</h3>
+            <span class="mini">Infrastruktur</span>
+            <h3>Hosting, server, domain, dan struktur platform</h3>
             <p>
-              Infrastructure thinking includes environment setup, server organization,
-              domain-level strategy, account orchestration, deployment planning,
-              remote administration, and scalable control over multiple digital assets.
+              Mencakup pemikiran tentang environment, pengelolaan hosting, kontrol domain,
+              monitoring resource, deployment, serta organisasi aset digital agar mudah dikelola.
             </p>
           </div>
 
           <div class="card">
-            <span class="mini">Interfaces</span>
-            <h3>Panels, Admin Screens & Branded Experiences</h3>
+            <span class="mini">Antarmuka</span>
+            <h3>Panel admin, dashboard, dan pengalaman visual</h3>
             <p>
-              Interfaces are designed to feel usable and premium. The emphasis is on
-              clear data presentation, operational flow, brand consistency, visual hierarchy,
-              and the ability to make complex systems easier to understand.
+              Setiap tampilan dirancang agar tidak sekadar fungsional, tetapi juga nyaman digunakan,
+              jelas dalam menyajikan data, dan tetap memperlihatkan kualitas visual yang profesional.
             </p>
           </div>
 
           <div class="card">
-            <span class="mini">Integration</span>
-            <h3>APIs, Bots, Sheets & External Services</h3>
+            <span class="mini">Integrasi</span>
+            <h3>API, bot, spreadsheet, dan layanan eksternal</h3>
             <p>
-              Many projects involve connecting tools and services together:
-              backend APIs, Google Sheets, notification layers, bots, third-party services,
-              and operational bridges that allow data to move across systems reliably.
+              Banyak proyek dibangun di atas koneksi antar layanan: backend API, Google Sheets,
+              bot Telegram, sistem notifikasi, dan lapisan lain yang memungkinkan data bergerak dengan konsisten.
             </p>
           </div>
 
           <div class="card">
             <span class="mini">Branding</span>
-            <h3>From Utility to Identity</h3>
+            <h3>Dari tools biasa menjadi identitas yang kuat</h3>
             <p>
-              TrYsIdeWEd projects are not anonymous utilities. They carry recognizable style:
-              naming systems, color direction, project identity, dashboard polish,
-              and a sense that each tool belongs to one larger evolving ecosystem.
+              TrYsIdeWEd selalu menempatkan identitas brand sebagai bagian dari sistem, termasuk warna,
+              gaya visual, penamaan, dan arah desain agar setiap proyek terlihat sebagai bagian dari ekosistem yang sama.
             </p>
           </div>
 
           <div class="card">
-            <span class="mini">Growth</span>
-            <h3>SEO Readiness & Discoverability</h3>
+            <span class="mini">Pertumbuhan</span>
+            <h3>Kesiapan SEO dan visibilitas digital</h3>
             <p>
-              Technical SEO is treated as part of the build process. Pages are shaped to be discoverable,
-              structured for search engines, and ready to support indexing, growth, visibility,
-              and content scalability over time.
+              Struktur halaman dan konten dirancang agar siap ditemukan, mudah diindeks,
+              dan dapat berkembang sebagai aset digital jangka panjang melalui fondasi teknis yang tepat.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section reveal" id="portfolio">
+    <section class="section reveal" id="portofolio">
       <div class="container">
         <div class="section-head">
-          <h2>Portfolio Archive</h2>
+          <h2>Portofolio Arah Pengembangan</h2>
           <p>
-            This section summarizes the broader archive of work associated with TrYsIdeWEd.
-            Instead of listing every conversation literally, it presents the recurring systems and deliverables
-            in a clean portfolio format.
+            Section ini merangkum kategori portofolio yang merepresentasikan berbagai hal yang telah dibangun,
+            dirancang, atau disempurnakan di dalam ekosistem TrYsIdeWEd.
           </p>
         </div>
 
         <div class="portfolio-list">
           <div class="portfolio-item">
-            <h3>Infrastructure Dashboards</h3>
+            <h3>Dashboard Infrastruktur</h3>
             <p>
-              Multi-server and multi-domain ideas for centralized management, file tools, usage monitoring,
-              operational dashboards, health panels, domain routing, and server-aware controls.
+              Meliputi ide dan implementasi panel untuk monitoring server, manajemen domain,
+              tampilan statistik resource, file tools, sinkronisasi layanan, dan kontrol multi-server.
             </p>
           </div>
 
           <div class="portfolio-item">
-            <h3>Automation Platforms</h3>
+            <h3>Platform Otomasi</h3>
             <p>
-              Systems that collect, validate, log, transform, and route data through custom logic,
-              usually connected to panels, Sheets, APIs, or messaging interfaces for visibility and control.
+              Berisi sistem yang mengumpulkan, memvalidasi, mencatat, memetakan, dan menyalurkan data
+              ke workflow tertentu dengan fokus pada kecepatan, keteraturan, dan kemudahan operasional.
             </p>
           </div>
 
           <div class="portfolio-item">
-            <h3>Telegram-Controlled Operations</h3>
+            <h3>Operasional Berbasis Bot Telegram</h3>
             <p>
-              Bot-based environments for command execution, configuration handling, administrative controls,
-              status queries, dynamic mapping, and operational support across remote services.
+              Mencakup command tools, pengelolaan konfigurasi, kontrol dari jarak jauh, notifikasi status,
+              dan integrasi bot sebagai lapisan pengelola untuk berbagai kebutuhan administrasi.
             </p>
           </div>
 
           <div class="portfolio-item">
-            <h3>Branded Toolkits & Utilities</h3>
+            <h3>Toolkit & Utilities Beridentitas Brand</h3>
             <p>
-              Custom interfaces and utility concepts designed with a consistent TrYsIdeWEd feel:
-              internal editors, management tools, branded pages, utility screens, and premium dashboard layouts.
+              Berbagai tools, halaman, utility screens, dan panel admin yang dibuat dengan nuansa visual
+              khas TrYsIdeWEd agar tetap memiliki karakter dan nilai presentasi yang tinggi.
             </p>
           </div>
 
           <div class="portfolio-item">
-            <h3>SEO & Content Systems</h3>
+            <h3>Sistem SEO & Presentasi Konten</h3>
             <p>
-              Page structure planning, metadata strategy, indexing support, sitemap architecture,
-              visibility-oriented layout decisions, and scalable content presentation frameworks.
+              Perencanaan metadata, struktur halaman, sitemap, dan aturan crawling yang dirancang
+              untuk membantu pertumbuhan visibilitas digital secara lebih kuat dan terukur.
             </p>
           </div>
 
           <div class="portfolio-item">
-            <h3>Front-End Brand Experiences</h3>
+            <h3>Website Profil & Showcase Proyek</h3>
             <p>
-              Landing pages, profile sites, showcase pages, presentation-focused layouts,
-              interface refinements, animation-driven sections, and polished design systems for web presence.
+              Halaman-halaman yang berfungsi untuk menampilkan identitas brand, project archive,
+              landing page promosi, showcase layanan, dan presentasi portofolio secara profesional.
             </p>
           </div>
         </div>
@@ -986,39 +965,42 @@
       <div class="container grid-2">
         <div>
           <div class="section-head">
-            <h2>Journey Timeline</h2>
+            <h2>Timeline Perkembangan</h2>
             <p>
-              The ecosystem has evolved from isolated ideas into a broader architecture of branded tools,
-              automation logic, admin systems, and infrastructure planning.
+              Perjalanan TrYsIdeWEd terus berkembang dari kumpulan ide teknis menjadi satu kerangka ekosistem digital yang lebih besar.
             </p>
           </div>
 
           <div class="timeline">
             <div class="timeline-item">
-              <h4>Phase 1 — Experiments into Structured Ideas</h4>
+              <h4>Fase 1 — Eksperimen dan kebutuhan teknis dasar</h4>
               <p>
-                Early concepts focused on utilities, internal helpers, scripts, and custom operational shortcuts.
+                Berawal dari tools sederhana, utility internal, script custom, dan kebutuhan teknis praktis
+                yang mendorong lahirnya banyak ide pengembangan.
               </p>
             </div>
+
             <div class="timeline-item">
-              <h4>Phase 2 — Dashboards, Panels & Management Interfaces</h4>
+              <h4>Fase 2 — Munculnya dashboard dan panel manajemen</h4>
               <p>
-                The work expanded into richer admin panels, front-end presentation, data views,
-                and more coherent system design.
+                Pengembangan mulai bergerak ke arah UI yang lebih matang,
+                panel admin, tampilan monitoring, dan sistem dengan struktur yang lebih jelas.
               </p>
             </div>
+
             <div class="timeline-item">
-              <h4>Phase 3 — Ecosystem Thinking</h4>
+              <h4>Fase 3 — Integrasi antar proyek dan layanan</h4>
               <p>
-                Separate tools began to connect into a vision for a full platform:
-                domains, hosting, bots, SEO systems, branded panels, and automation layers.
+                Berbagai tools mulai saling terhubung melalui workflow,
+                bot, spreadsheet, API, hosting control, dan sistem backend lainnya.
               </p>
             </div>
+
             <div class="timeline-item">
-              <h4>Phase 4 — Brand + Infrastructure + Scalability</h4>
+              <h4>Fase 4 — Ekosistem brand, otomasi, dan infrastruktur</h4>
               <p>
-                TrYsIdeWEd matured into a recognizable framework for building future-facing digital systems
-                with strong identity and practical operational depth.
+                TrYsIdeWEd berkembang menjadi framework pemikiran untuk membangun
+                platform digital yang punya identitas, kemampuan teknis, dan arah pertumbuhan jangka panjang.
               </p>
             </div>
           </div>
@@ -1026,10 +1008,10 @@
 
         <div id="stack">
           <div class="section-head">
-            <h2>Technology & Working Stack</h2>
+            <h2>Teknologi & Stack yang Digunakan</h2>
             <p>
-              The ecosystem is intentionally cross-stack, choosing tools based on the problem:
-              interfaces, automation, backend flows, deployment, operational management, and data integration.
+              TrYsIdeWEd bersifat lintas teknologi. Pemilihan stack selalu menyesuaikan kebutuhan:
+              tampilan front-end, workflow backend, otomasi, integrasi data, hingga deployment.
             </p>
           </div>
 
@@ -1042,12 +1024,12 @@
             <span class="stack">PHP</span>
             <span class="stack">Python</span>
             <span class="stack">Google Sheets API</span>
-            <span class="stack">REST APIs</span>
-            <span class="stack">Telegram Bots</span>
-            <span class="stack">cPanel / WHM Concepts</span>
-            <span class="stack">Domain Infrastructure</span>
-            <span class="stack">Dashboard UI Systems</span>
-            <span class="stack">Automation Logic</span>
+            <span class="stack">REST API</span>
+            <span class="stack">Telegram Bot</span>
+            <span class="stack">Dashboard UI</span>
+            <span class="stack">Hosting Infrastructure</span>
+            <span class="stack">Domain Management</span>
+            <span class="stack">Workflow Automation</span>
             <span class="stack">SEO Architecture</span>
             <span class="stack">GitHub Pages</span>
           </div>
@@ -1055,18 +1037,18 @@
       </div>
     </section>
 
-    <section class="section reveal" id="contact">
+    <section class="section reveal" id="kontak">
       <div class="container">
         <div class="cta-box">
-          <h2>TrYsIdeWEd is still growing.</h2>
+          <h2>TrYsIdeWEd terus berkembang</h2>
           <p>
-            This website is both a profile and a foundation: a public-facing hub for the brand,
-            a portfolio archive for completed directions, and a launch point for the next generation of dashboards,
-            platforms, automations, and digital systems to come.
+            Website ini bukan hanya halaman profil, tetapi juga fondasi publik untuk menjelaskan arah brand,
+            menampilkan portofolio proyek, menunjukkan kemampuan teknis, dan menjadi titik awal
+            untuk dashboard, tools, sistem otomasi, serta platform-platform besar berikutnya yang akan dibangun.
           </p>
           <div class="hero-actions" style="justify-content:center;">
-            <a href="https://github.com/tryxapp" target="_blank" class="btn btn-primary">Open GitHub</a>
-            <a href="#about" class="btn btn-secondary">Read the Story</a>
+            <a href="https://github.com/tryxapp" target="_blank" class="btn btn-primary">Lihat GitHub</a>
+            <a href="#tentang" class="btn btn-secondary">Baca Selengkapnya</a>
           </div>
         </div>
       </div>
@@ -1076,7 +1058,7 @@
   <footer class="footer">
     <div class="container footer-wrap">
       <div>
-        <p><strong>TrYsIdeWEd</strong> — Digital Systems, Automation, Infrastructure, Portfolio & Brand Engineering.</p>
+        <p><strong>TrYsIdeWEd</strong> — Ekosistem Digital, Otomasi, Infrastruktur, Portofolio, dan Brand Engineering.</p>
       </div>
       <div>
         <p>© 2026 TrYsIdeWEd.</p>
