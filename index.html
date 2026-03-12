@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrYsIdeWEd | Digital Ecosystem & Automation</title>
+  <meta name="description" content="TrYsIdeWEd adalah ekosistem digital yang berfokus pada automation, infrastructure, dashboard, hosting management, SEO tools, bot development, dan custom web solutions." />
+  <meta name="keywords" content="TrYsIdeWEd, tryxapp, automation, hosting, dashboard, bot telegram, SEO tools, infrastructure, web development" />
+  <meta name="author" content="TrYsIdeWEd" />
+
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-soft: #0d1b2f;
+      --card: rgba(255,255,255,0.06);
+      --card-border: rgba(255,255,255,0.12);
+      --text: #eaf2ff;
+      --muted: #9bb0d1;
+      --accent: #4da3ff;
+      --accent-2: #79f2ff;
+      --success: #7dffbf;
+      --shadow: 0 10px 40px rgba(0,0,0,.25);
+      --radius: 22px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(77,163,255,0.18), transparent 30%),
+        radial-gradient(circle at top right, rgba(121,242,255,0.12), transparent 28%),
+        linear-gradient(180deg, #06101d 0%, #081423 45%, #0a1628 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(14px);
+      background: rgba(4, 11, 22, 0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-size: 1.1rem;
+    }
+
+    .logo-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #03111f;
+      font-weight: 900;
+      box-shadow: var(--shadow);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      transition: .25s ease;
+      font-size: .95rem;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    .hero {
+      padding: 90px 0 60px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 8px 14px;
+      border: 1px solid rgba(121,242,255,0.2);
+      background: rgba(121,242,255,0.08);
+      border-radius: 999px;
+      color: var(--accent-2);
+      font-size: .85rem;
+      letter-spacing: .5px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 4.4rem);
+      line-height: 1.08;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(90deg, #ffffff 0%, var(--accent-2) 60%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 720px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 14px;
+      font-weight: bold;
+      transition: .25s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #03111f;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+    }
+
+    .btn-secondary {
+      border-color: rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.04);
+      color: #fff;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.08);
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      border: 1px solid var(--card-border);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -40px -40px auto;
+      width: 160px;
+      height: 160px;
+      background: radial-gradient(circle, rgba(77,163,255,0.3), transparent 65%);
+      border-radius: 50%;
+    }
+
+    .hero-card h3 {
+      margin-bottom: 16px;
+      font-size: 1.2rem;
+    }
+
+    .hero-card ul {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .hero-card li {
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.04);
+      color: var(--muted);
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+
+    section {
+      padding: 36px 0 22px;
+    }
+
+    .section-title {
+      margin-bottom: 20px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: .98rem;
+    }
+
+    .mini-label {
+      display: inline-block;
+      margin-bottom: 12px;
+      font-size: .78rem;
+      color: var(--success);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 10px;
+    }
+
+    .stat {
+      padding: 24px 20px;
+      text-align: center;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .stat h3 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    .stat p {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 14px;
+    }
+
+    .timeline .item {
+      padding: 18px 20px;
+      border-left: 3px solid var(--accent);
+      background: rgba(255,255,255,0.04);
+      border-radius: 0 18px 18px 0;
+    }
+
+    .timeline .item h4 {
+      margin-bottom: 6px;
+    }
+
+    .timeline .item p {
+      color: var(--muted);
+    }
+
+    .footer {
+      margin-top: 56px;
+      padding: 30px 0 50px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .footer p {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      padding: 9px 12px;
+      border-radius: 999px;
+      font-size: .85rem;
+      color: #d8e7ff;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .grid-3,
+      .grid-2,
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-wrap {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <a href="#" class="logo">
+        <span class="logo-badge">T</span>
+        <span>TrYsIdeWEd</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#about">Tentang</a>
+        <a href="#services">Layanan</a>
+        <a href="#ecosystem">Ekosistem</a>
+        <a href="#vision">Visi</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Digital Ecosystem • Automation • Infrastructure</span>
+          <h1>Membangun Masa Depan Digital dengan <span>TrYsIdeWEd</span></h1>
+          <p>
+            TrYsIdeWEd adalah identitas digital dan ekosistem pengembangan yang berfokus pada
+            automation, dashboard management, hosting infrastructure, bot development,
+            SEO tools, custom web platform, serta solusi teknis untuk kebutuhan skala kecil hingga besar.
+          </p>
+          <div class="hero-actions">
+            <a href="#about" class="btn btn-primary">Pelajari Lebih Lanjut</a>
+            <a href="#contact" class="btn btn-secondary">Hubungi / Kolaborasi</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h3>Fokus Utama TrYsIdeWEd</h3>
+          <ul>
+            <li><strong>Automation System</strong><br>Pengembangan alur kerja otomatis untuk efisiensi operasional digital.</li>
+            <li><strong>Hosting & Infrastructure</strong><br>Pengelolaan server, domain, dashboard, dan monitoring terpusat.</li>
+            <li><strong>Custom Web Solutions</strong><br>Pembuatan tools, panel, landing page, dan sistem backend sesuai kebutuhan.</li>
+            <li><strong>Bot & Integration</strong><br>Integrasi Telegram bot, API, spreadsheet, dan sistem pihak ketiga.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>Tentang TrYsIdeWEd</h2>
+          <p>
+            TrYsIdeWEd hadir sebagai identitas kreatif dan teknis yang menggabungkan
+            visual branding, rekayasa sistem, dan otomasi digital menjadi satu ekosistem yang solid.
+            Tujuan utamanya adalah membangun platform yang efisien, modern, scalable,
+            dan siap berkembang sesuai kebutuhan proyek.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <span class="mini-label">Identity</span>
+            <h3>Brand dengan Arah Teknis yang Kuat</h3>
+            <p>
+              TrYsIdeWEd bukan hanya nama, tetapi fondasi dari berbagai proyek digital
+              yang menekankan kecepatan, kerapihan struktur, integrasi teknologi, serta
+              efisiensi kerja melalui otomasi dan sistem yang tersusun rapi.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="mini-label">Purpose</span>
+            <h3>Menghubungkan Ide, Sistem, dan Eksekusi</h3>
+            <p>
+              Dari website profile, dashboard manajemen, monitoring server, SEO tools,
+              hingga workflow bot dan API, TrYsIdeWEd dirancang untuk menjadi pusat
+              pengembangan solusi digital yang saling terhubung.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Layanan dan Cakupan</h2>
+          <p>
+            Berikut beberapa area utama yang menjadi inti pengembangan di dalam ekosistem TrYsIdeWEd.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Web Development</h3>
+            <p>
+              Pembuatan website modern, landing page profesional, company profile,
+              portal layanan, dan halaman promosi dengan desain yang responsif dan terstruktur.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Dashboard & Admin Panel</h3>
+            <p>
+              Pengembangan dashboard internal untuk monitoring data, manajemen domain,
+              kontrol server, statistik pengguna, dan pengelolaan workflow secara terpusat.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Automation Tools</h3>
+            <p>
+              Pembuatan tools otomatis untuk sinkronisasi data, crawling, deployment,
+              pengelolaan spreadsheet, dan proses berulang yang membutuhkan akurasi tinggi.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Bot Integration</h3>
+            <p>
+              Integrasi Telegram bot, sistem notifikasi, command tools, serta koneksi
+              dengan API eksternal untuk mempercepat operasional dan komunikasi.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Hosting & Infrastructure</h3>
+            <p>
+              Manajemen domain, hosting, VPS, panel monitoring, file management,
+              dan pengaturan infrastruktur digital agar stabil, aman, dan mudah dikendalikan.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>SEO & Growth Support</h3>
+            <p>
+              Struktur halaman yang siap crawl, optimasi metadata, dukungan indexability,
+              dan pendekatan teknis untuk mendukung pertumbuhan visibilitas digital.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ecosystem">
+      <div class="container">
+        <div class="section-title">
+          <h2>Ekosistem TrYsIdeWEd</h2>
+          <p>
+            TrYsIdeWEd dikembangkan sebagai ekosistem, bukan sekadar satu website.
+            Setiap komponen dapat saling terhubung untuk membentuk alur kerja yang efisien.
+          </p>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <h3>01</h3>
+            <p>Brand Identity yang konsisten dan profesional</p>
+          </div>
+          <div class="stat">
+            <h3>02</h3>
+            <p>Automation system untuk operasional yang lebih cepat</p>
+          </div>
+          <div class="stat">
+            <h3>03</h3>
+            <p>Infrastructure management yang terpusat</p>
+          </div>
+          <div class="stat">
+            <h3>04</h3>
+            <p>Scalable project architecture untuk berkembang jangka panjang</p>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">Hosting Panel</span>
+          <span class="tag">Domain Management</span>
+          <span class="tag">Telegram Bot</span>
+          <span class="tag">Custom API</span>
+          <span class="tag">Monitoring Tools</span>
+          <span class="tag">SEO Structure</span>
+          <span class="tag">Automation Workflow</span>
+          <span class="tag">Web Infrastructure</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="vision">
+      <div class="container">
+        <div class="section-title">
+          <h2>Visi Pengembangan</h2>
+          <p>
+            Arah utama TrYsIdeWEd adalah membangun fondasi digital yang kuat,
+            fleksibel, dan siap di-scale menjadi ekosistem teknologi yang lebih luas.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="item">
+            <h4>Fase 1 — Pondasi Brand & Platform</h4>
+            <p>
+              Membangun identitas visual, website utama, halaman informasi, dan struktur inti
+              yang mencerminkan nilai profesional, modern, dan teknis.
+            </p>
+          </div>
+
+          <div class="item">
+            <h4>Fase 2 — Integrasi Sistem & Automation</h4>
+            <p>
+              Menghubungkan dashboard, tools internal, bot, API, dan manajemen data
+              agar seluruh alur kerja dapat berjalan secara sinkron.
+            </p>
+          </div>
+
+          <div class="item">
+            <h4>Fase 3 — Skalabilitas & Ekspansi Ekosistem</h4>
+            <p>
+              Mengembangkan layanan, produk digital, serta infrastruktur yang siap mendukung
+              pertumbuhan proyek dengan performa dan fleksibilitas yang lebih tinggi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Kontak & Kolaborasi</h2>
+          <p>
+            TrYsIdeWEd terbuka untuk pengembangan project, kolaborasi teknis,
+            pembuatan platform custom, dan penguatan ekosistem digital.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <span class="mini-label">Collaboration</span>
+            <h3>Siap Dibangun Lebih Besar</h3>
+            <p>
+              Website ini dapat menjadi pusat informasi resmi, landing profile,
+              maupun pintu masuk ke seluruh project dan layanan yang berada di dalam ekosistem TrYsIdeWEd.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="mini-label">Contact</span>
+            <h3>Mulai dari Sini</h3>
+            <p>
+              Anda bisa mengganti bagian ini dengan email, Telegram, GitHub,
+              atau link project lain milik Anda.
+              Contoh: <br><br>
+              Email: yourmail@example.com<br>
+              GitHub: tryxapp.github.io<br>
+              Brand: TrYsIdeWEd
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <div>
+        <p><strong>TrYsIdeWEd</strong> — Digital Ecosystem, Automation, Infrastructure & Creative Technical Solutions.</p>
+      </div>
+      <div>
+        <p>© 2026 TrYsIdeWEd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
