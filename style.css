@@ -447,6 +447,19 @@ a {
   gap: 14px;
 }
 
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.timeline-column {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
 .timeline-item {
   padding: 18px 20px;
   border-left: 3px solid var(--accent);
@@ -575,7 +588,8 @@ a {
   .grid-4,
   .grid-3,
   .grid-2,
-  .showcase {
+  .showcase,
+  .timeline-grid {
     grid-template-columns: 1fr;
   }
 }
